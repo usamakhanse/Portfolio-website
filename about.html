@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Muhammad Usama Khan, Frontend Developer">
+    <title>About Me | Muhammad Usama Khan</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar container">
+            <a href="index.html#home" class="logo">Usama<span>.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#cv">CV</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn">☀️ Light</button>
+                <button id="authBtn" class="auth-btn">Login</button>
+                <button class="menu-btn" id="menuBtn">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p>GET TO KNOW ME</p>
+                    <h1>About Me</h1>
+                </div>
+
+                <div class="about-card">
+                    <h3>I'm Muhammad Usama Khan</h3>
+
+                    <p>
+                        I am a Software Engineering student with a strong interest
+                        in Frontend Development. I focus on building clean,
+                        attractive and responsive user interfaces using HTML5,
+                        CSS3, JavaScript and React.js.
+                    </p>
+
+                    <p>
+                        I continuously improve my skills through hands-on practice
+                        and personal projects. My goal is to become a professional
+                        Frontend Developer and create high-quality web experiences.
+                    </p>
+
+                    <p>
+                        I am open to frontend internships, collaborative projects
+                        and opportunities to learn from experienced developers.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Muhammad Usama Khan. All Rights Reserved.</p>
+            <p>Designed with ❤️ by Usama</p>
+        </div>
+    </footer>
+
+    <div class="login-modal" id="loginModal">
+        <div class="login-box" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+            <button class="close-btn" id="closeModal" type="button" aria-label="Close">&times;</button>
+            <div class="login-icon" aria-hidden="true">👤</div>
+            <h2 id="authTitle">Welcome Back!</h2>
+            <p id="authSubtitle">Log in to your portfolio account</p>
+
+            <form id="loginForm" class="auth-form">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" autocomplete="email" placeholder="you@example.com" required>
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" autocomplete="current-password" placeholder="Enter your password" minlength="6" required>
+                <button type="submit" class="primary-btn login-submit">Log In</button>
+                <button type="button" class="auth-text-button" data-auth-mode="reset">Forgot password?</button>
+                <p class="auth-switch">Don't have an account? <button type="button" class="auth-text-button" data-auth-mode="signup">Sign up</button></p>
+            </form>
+
+            <form id="signupForm" class="auth-form" hidden>
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" autocomplete="email" placeholder="you@example.com" required>
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" autocomplete="new-password" placeholder="At least 6 characters" minlength="6" required>
+                <label for="signupConfirmPassword">Confirm password</label>
+                <input type="password" id="signupConfirmPassword" autocomplete="new-password" placeholder="Re-enter your password" minlength="6" required>
+                <button type="submit" class="primary-btn login-submit">Create Account</button>
+                <p class="auth-switch">Already have an account? <button type="button" class="auth-text-button" data-auth-mode="login">Log in</button></p>
+            </form>
+
+            <form id="resetForm" class="auth-form" hidden>
+                <label for="resetEmail">Account email</label>
+                <input type="email" id="resetEmail" autocomplete="email" placeholder="you@example.com" required>
+                <label for="resetPassword">New password</label>
+                <input type="password" id="resetPassword" autocomplete="new-password" placeholder="At least 6 characters" minlength="6" required>
+                <label for="resetConfirmPassword">Confirm new password</label>
+                <input type="password" id="resetConfirmPassword" autocomplete="new-password" placeholder="Re-enter your password" minlength="6" required>
+                <button type="submit" class="primary-btn login-submit">Reset Password</button>
+                <p class="auth-switch">Local demo only: no email verification is sent.</p>
+                <p class="auth-switch"><button type="button" class="auth-text-button" data-auth-mode="login">Back to log in</button></p>
+            </form>
+
+            <p id="loginMessage" class="login-message" role="status" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
